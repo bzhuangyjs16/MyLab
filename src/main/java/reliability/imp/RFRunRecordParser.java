@@ -7,6 +7,6 @@ import reliability.parser.RunRecordParser;
 public class RFRunRecordParser implements RunRecordParser {
     @Override
     public RunRecordResult parser(ReliabilityParserResult reliabilityParserResult) {
-        return null;
+        return new RunRecordResult();
     }
 }
