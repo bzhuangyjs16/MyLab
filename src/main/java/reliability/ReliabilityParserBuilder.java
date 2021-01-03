@@ -10,15 +10,14 @@ import java.util.List;
 /**
  * 可靠性构建器
  */
-public class ReliabilityParserBuilder<R,S> {
+public class ReliabilityParserBuilder<R, S> {
     private String path;
 
     private ReliabilityParserResult reliabilityParserResult;
 
-    private SaveRelParserResult saveRelParserResult;
-
-    public ReliabilityParserBuilder(String path) {
+    public ReliabilityParserBuilder(String path,ReliabilityParserResult reliabilityParserResult) {
         this.path = path;
+        this.reliabilityParserResult = reliabilityParserResult;
     }
 
     public ReliabilityParserBuilder setFileResult(FileParser fileParser) {
@@ -33,13 +32,13 @@ public class ReliabilityParserBuilder<R,S> {
         return this;
     }
 
-    public ReliabilityParserBuilder setRawRelResult(RawRelResultParser<R> rawRelResultParser){
+    public ReliabilityParserBuilder setRawRelResult(RawRelResultParser<R> rawRelResultParser) {
         List<R> rawRelResults = rawRelResultParser.parser(reliabilityParserResult);
         reliabilityParserResult.setRawRelResults(rawRelResults);
         return this;
     }
 
-    public ReliabilityParserBuilder setSmmResults(SummResultParser<S> summResultParser){
+    public ReliabilityParserBuilder setSmmResults(SummResultParser<S> summResultParser) {
         List<S> summResults = summResultParser.parser(reliabilityParserResult);
         reliabilityParserResult.setSummResults(summResults);
         return this;

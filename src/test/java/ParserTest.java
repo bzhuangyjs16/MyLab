@@ -1,5 +1,8 @@
 import org.junit.Test;
 import reliability.ReliabilityParser;
+import reliability.entity.ReliabilityParserResult;
+import reliability.entity.rf.TRFRawRelResult;
+import reliability.entity.rf.TRFSummResult;
 import reliability.imp.*;
 import reliability.parser.*;
 
@@ -7,8 +10,8 @@ public class ParserTest {
     @Test
     public void testParser(){
         String path = "d://";
-        // 向数据库保存解析结果
-        SaveRelParserResult relParserResult = new SaveRFParserResult();
+        // 保存解析结果
+        ReliabilityParserResult<TRFRawRelResult, TRFSummResult> reliabilityParserResult = new ReliabilityParserResult();
         // 解析File得到FileResult
         FileParser fileParser = new RFFileParser();
         // 解析Run得到RunResult
@@ -17,9 +20,11 @@ public class ParserTest {
         RawRelResultParser rawRelResultParser = new RFRawRelResultParser();
         // 二次计算得到summResult
         SummResultParser summResultParser = new RFSummResultParser();
-        ReliabilityParser.setPath(path).setFileResult(fileParser)
+        // 向数据库保存解析结果
+        SaveRelParserResult saveRelParserResult = new SaveRFParserResult();
+        ReliabilityParser.setPath(path,reliabilityParserResult).setFileResult(fileParser)
                 .setRunRecordResult(runRecordParser)
                 .setRawRelResult(rawRelResultParser)
-                .setSmmResults(summResultParser).save(relParserResult);
+                .setSmmResults(summResultParser).save(saveRelParserResult);
     }
 }
