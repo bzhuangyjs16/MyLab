@@ -1,10 +1,10 @@
 import org.junit.Test;
-import reliability.ReliabilityParser;
-import reliability.entity.ReliabilityParserResult;
-import reliability.entity.rf.TRFRawRelResult;
-import reliability.entity.rf.TRFSummResult;
-import reliability.imp.*;
-import reliability.parser.*;
+import com.wildCrane.reliability.ReliabilityParser;
+import com.wildCrane.reliability.entity.ReliabilityParserResult;
+import com.wildCrane.reliability.entity.rf.TRFRawRelResult;
+import com.wildCrane.reliability.entity.rf.TRFSummResult;
+import com.wildCrane.reliability.imp.*;
+import com.wildCrane.reliability.parser.*;
 
 public class ParserTest {
     @Test
