@@ -1,11 +1,11 @@
-package com.wildCrane.annotaiton;
+package com.wildCrane.annotation;
 
 public class Person {
 
     @Deprecated
     @MyAnnotation
     public void empty(){
-        System.out.println("\nempty");
+        System.out.println("empty");
     }
 
     @MyAnnotation(value = {"girl","boy"})

@@ -1,16 +1,16 @@
-package com.wildCrane.annotaiton;
+package com.wildCrane.annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class AnnotationTest {
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, ClassNotFoundException {
         Person person = new Person();
         Class<Person> c = Person.class;
         Method mSomebody = c.getMethod("somebody", String.class,int.class);
         mSomebody.invoke(person,new Object[]{"lily",10});
-        Method mEmpty = c.getMethod("empty",new Class[]{});
+        Method mEmpty = c.getMethod("empty");
         iteratorAnnotations(mEmpty);
     }
 
@@ -27,5 +27,6 @@ public class AnnotationTest {
         for(Annotation annotation:annotations){
             System.out.println("a:"+annotation);
         }
+
     }
 }

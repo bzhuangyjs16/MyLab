@@ -99,7 +99,7 @@ public class ResultBody {
      */
     public static ResultBody error(String message) {
         ResultBody rb = new ResultBody();
-        rb.setCode(-1);
+        rb.setCode(HttpStatusEnum.BAD_REQUEST.getCode());
         rb.setMessage(message);
         rb.setData(null);
         return rb;

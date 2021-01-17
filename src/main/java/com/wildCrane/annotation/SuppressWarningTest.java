@@ -1,4 +1,4 @@
-package com.wildCrane.annotaiton;
+package com.wildCrane.annotation;
 
 import java.util.Date;
 
