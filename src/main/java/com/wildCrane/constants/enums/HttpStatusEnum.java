@@ -32,7 +32,7 @@ public enum HttpStatusEnum {
     FORBIDDEN(403, "Forbidden", "请求被理解，但是拒绝执行"),
     NOT_FOUND(404, "Not Found", "资源未找到"),
     METHOD_NOT_ALLOWED(405, "Method Not Allowed", "请求方法不允许被执行"),
-    NOT_ACCEPTABLE(406, "Not Acceptable", "请求的资源不满足请求者要求"),
+    NOT_ACCEPTABLE(406, "Not Acceptable", "请求的资源不满足要求"),
     PROXY_AUTHENTICATION_REQUIRED(407, "Proxy Authentication Required", "请通过代理进行身份验证"),
     REQUEST_TIMEOUT(408, "Request Timeout", "请求超时"),
     CONFLICT(409, "Conflict", "请求冲突"),
