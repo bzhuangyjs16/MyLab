@@ -3,6 +3,8 @@ package com.wildCrane.reliability;
 import com.wildCrane.reliability.entity.FileResult;
 import com.wildCrane.reliability.entity.ReliabilityParserResult;
 import com.wildCrane.reliability.entity.RunRecordResult;
+import com.wildCrane.reliability.entity.rf.TRFRawRelResult;
+import com.wildCrane.reliability.entity.rf.TRFSummResult;
 import com.wildCrane.reliability.parser.*;
 
 import java.util.List;
@@ -32,14 +34,14 @@ public class ReliabilityParserBuilder<R, S> {
         return this;
     }
 
-    public ReliabilityParserBuilder setRawRelResult(RawRelResultParser<R> rawRelResultParser) {
-        List<R> rawRelResults = rawRelResultParser.parser(reliabilityParserResult);
+    public ReliabilityParserBuilder setRawRelResult(RawRelResultParser rawRelResultParser) {
+        List<TRFRawRelResult> rawRelResults = rawRelResultParser.parser(reliabilityParserResult);
         reliabilityParserResult.setRawRelResults(rawRelResults);
         return this;
     }
 
-    public ReliabilityParserBuilder setSmmResults(SummResultParser<S> summResultParser) {
-        List<S> summResults = summResultParser.parser(reliabilityParserResult);
+    public ReliabilityParserBuilder setSmmResults(SummResultParser summResultParser) {
+        List<TRFSummResult> summResults = summResultParser.parser(reliabilityParserResult);
         reliabilityParserResult.setSummResults(summResults);
         return this;
     }
