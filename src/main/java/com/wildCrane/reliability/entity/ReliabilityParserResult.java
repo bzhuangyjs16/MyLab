@@ -1,5 +1,8 @@
 package com.wildCrane.reliability.entity;
 
+import com.wildCrane.reliability.entity.rf.TRFRawRelResult;
+import com.wildCrane.reliability.entity.rf.TRFSummResult;
+
 import java.util.List;
 
 public class ReliabilityParserResult<R,S> {
@@ -7,9 +10,9 @@ public class ReliabilityParserResult<R,S> {
 
     private RunRecordResult runRecordResults;
 
-    private List<R> rawRelResults;
+    private List<TRFRawRelResult> rawRelResults;
 
-    private List<S> summResults;
+    private List<TRFSummResult> summResults;
 
     public FileResult getFileResults() {
         return fileResults;
@@ -27,19 +30,19 @@ public class ReliabilityParserResult<R,S> {
         this.runRecordResults = runRecordResults;
     }
 
-    public List<R> getRawRelResults() {
+    public List<TRFRawRelResult> getRawRelResults() {
         return rawRelResults;
     }
 
-    public void setRawRelResults(List<R> rawRelResult) {
-        this.rawRelResults = rawRelResult;
+    public void setRawRelResults(List<TRFRawRelResult> rawRelResults) {
+        this.rawRelResults = rawRelResults;
     }
 
-    public List<S> getSummResults() {
+    public List<TRFSummResult> getSummResults() {
         return summResults;
     }
 
-    public void setSummResults(List<S> summResult) {
-        this.summResults = summResult;
+    public void setSummResults(List<TRFSummResult> summResults) {
+        this.summResults = summResults;
     }
 }

@@ -1,3 +1,4 @@
+import com.wildCrane.reliability.parser.imp.*;
 import org.junit.Test;
 import com.wildCrane.reliability.ReliabilityParser;
 import com.wildCrane.reliability.entity.ReliabilityParserResult;
@@ -11,7 +12,7 @@ public class ParserTest {
     public void testParser(){
         String path = "d://";
         // 保存解析结果
-        ReliabilityParserResult<TRFRawRelResult, TRFSummResult> reliabilityParserResult = new ReliabilityParserResult();
+        ReliabilityParserResult reliabilityParserResult = new ReliabilityParserResult();
         // 解析File得到FileResult
         FileParser fileParser = new RFFileParser();
         // 解析Run得到RunResult
