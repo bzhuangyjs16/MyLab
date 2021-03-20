@@ -1,4 +1,4 @@
-package com.wildCrane.reliability.imp;
+package com.wildCrane.reliability.parser.imp;
 
 import com.wildCrane.reliability.entity.FileResult;
 import com.wildCrane.reliability.parser.FileParser;

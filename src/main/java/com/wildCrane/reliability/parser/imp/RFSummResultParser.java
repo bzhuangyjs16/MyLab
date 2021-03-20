@@ -1,4 +1,4 @@
-package com.wildCrane.reliability.imp;
+package com.wildCrane.reliability.parser.imp;
 
 import com.wildCrane.reliability.entity.ReliabilityParserResult;
 import com.wildCrane.reliability.entity.rf.TRFSummResult;

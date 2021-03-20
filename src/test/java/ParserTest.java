@@ -3,7 +3,7 @@ import com.wildCrane.reliability.ReliabilityParser;
 import com.wildCrane.reliability.entity.ReliabilityParserResult;
 import com.wildCrane.reliability.entity.rf.TRFRawRelResult;
 import com.wildCrane.reliability.entity.rf.TRFSummResult;
-import com.wildCrane.reliability.imp.*;
+import com.wildCrane.reliability.parser.imp.*;
 import com.wildCrane.reliability.parser.*;
 
 public class ParserTest {
